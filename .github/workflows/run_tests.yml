@@ -37,8 +37,9 @@ jobs:
         diff output.txt test/expected_output_2.txt
         
     - name: Finish
-      working-directory: ${{github.workspace}}/build
+      working-directory: ${{github.workspace}}
       run: |
+        cd build
         rm output.txt
         cd ..
         rm -rf build
