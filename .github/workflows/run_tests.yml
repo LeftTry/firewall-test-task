@@ -36,7 +36,7 @@ jobs:
         ./build/bin/firewall 2 < test/packets_2.txt > output.txt
         diff output.txt test/expected_output_2.txt
 
-    - name: Test 2nd ruleset
+    - name: Test Rand Pack Gen
       working-directory: ${{github.workspace}}
       run: |
         ./build/bin/rand_pack_gen 20 > random_packets.txt
