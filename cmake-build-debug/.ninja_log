@@ -1,0 +1,5 @@
+# ninja log v5
+38	64	1718979731847232483	bin/firewall	7e413f8062c4add3
+0	35	1718979654412516668	CMakeFiles/firewall.dir/rules.c.o	92e06306727f5e7b
+1	38	1718979731823898733	CMakeFiles/firewall.dir/firewall.c.o	e2d5cecb9b031bc2
+119	152	1718978162226191340	firewall_test_task	2f8198537ff87fef

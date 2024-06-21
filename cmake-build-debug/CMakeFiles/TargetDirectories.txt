@@ -1,0 +1,3 @@
+/home/fum/CLionProjects/firewall-test-task/cmake-build-debug/CMakeFiles/firewall.dir
+/home/fum/CLionProjects/firewall-test-task/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/fum/CLionProjects/firewall-test-task/cmake-build-debug/CMakeFiles/rebuild_cache.dir
