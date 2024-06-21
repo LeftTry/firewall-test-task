@@ -15,13 +15,13 @@ cmake --build .
 ```
 To run the program with manual input (it will not stop until the `EOF`) execute this:
 ```commandline
-./bin/firewall 1
+./build/bin/firewall 1
 ```
 To run program with default input (lays in the `test/packets.txt`) execute this:
 ```commandline
-./bin/firewall 1 < ../test/packets.txt
+./build/bin/firewall 1 < ../test/packets_1.txt
 ```
-
+The number after `./build/bin/firewall` is a number of ruleset the firewall will use.
 ## Testing
 To run tests you will need to execute run_tests.sh. It is automatically building, so you do not have to build it 
 manually. Just run this command:
