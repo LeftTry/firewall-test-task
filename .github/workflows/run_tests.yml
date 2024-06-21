@@ -24,16 +24,16 @@ jobs:
         cmake --build .
 
     - name: Test 1
-      working-directory: ${{github.workspace}}/build
+      working-directory: ${{github.workspace}}
       run: |
-        ./bin/firewall 1 < ../test/packets_1.txt > output.txt
-        diff output.txt ../test/expected_output_1.txt
+        ./bin/firewall 1 < test/packets_1.txt > output.txt
+        diff output.txt test/expected_output_1.txt
         
     - name: Test 2
-      working-directory: ${{github.workspace}}/build
+      working-directory: ${{github.workspace}}
       run: |
-        ./bin/firewall 2 < ../test/packets_2.txt > output.txt
-        diff output.txt ../test/expected_output_2.txt
+        ./bin/firewall 2 < test/packets_2.txt > output.txt
+        diff output.txt test/expected_output_2.txt
         
     - name: Finish
       working-directory: ${{github.workspace}}/build
