@@ -21,6 +21,11 @@ To run program with default input (lays in the `test/packets.txt`) execute this:
 ```commandline
 ./build/bin/firewall 1 < ../test/packets_1.txt
 ```
+To run random packet generator use this list of commands:
+```commandline
+./build/bin/rand_pack_gen 20 > random_packets.txt
+./build/bin/firewall 1 < random_packets.txt
+```
 The number after `./build/bin/firewall` is a number of ruleset the firewall will use.
 ## Testing
 To run tests you will need to execute run_tests.sh. It is automatically building, so you do not have to build it 

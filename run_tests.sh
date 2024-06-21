@@ -27,6 +27,25 @@ run_test() {
     rm -rf build
 }
 
+# Test for Pack Gen
+generate_random_packets() {
+    local num_packets=$1
+    ./build/bin/rand_pack_gen $num_packets > random_packets.txt
+}
+
 # Run tests for both rulesets
 run_test 1 test/packets_1.txt test/expected_output_1.txt
 run_test 2 test/packets_2.txt test/expected_output_2.txt
+
+# Test Random Packet Generation
+mkdir -p build
+cd build
+cmake ..
+cmake --build .
+cd ..
+
+generate_random_packets 20
+./build/bin/firewall 1 < random_packets.txt
+
+rm random_packets.txt
+rm -rf build
