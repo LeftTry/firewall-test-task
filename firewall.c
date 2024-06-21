@@ -21,11 +21,18 @@ void process_packet(const char* src_ip, const char* dst_ip, int src_port, int ds
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
-        fprintf(stderr, "Usage: %s <ruleset file>\n", argv[0]);
+        fprintf(stderr, "Usage: %s <ruleset number>\n", argv[0]);
         return EXIT_FAILURE;
     }
 
-    if (!load_rules(argv[1])) {
+    char* filename;
+    char* data = argv[1];
+    if(strcmp(data, "1") == 0) {\
+        filename = "rulesets/ruleset_1.txt";
+    } else if(strcmp(data, "2") == 0) {
+        filename = "rulesets/ruleset_2.txt";
+    }
+    if (!load_rules(filename)) {
         fprintf(stderr, "Failed to load ruleset.\n");
         return EXIT_FAILURE;
     }

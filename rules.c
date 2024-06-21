@@ -33,6 +33,8 @@ int load_rules(const char *filename) {
             rules[i].proto = 6;
         } else if (strcmp(proto_str, "udp") == 0) {
             rules[i].proto = 17;
+        } else if (strcmp(proto_str, "icmp") == 0) {
+            rules[i].proto = 1;
         } else {
             rules[i].proto = -1;
         }
